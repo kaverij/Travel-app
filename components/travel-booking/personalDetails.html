@@ -1,0 +1,31 @@
+<br>
+<!--first-tab-box-for-personal-details-->
+<div class="tab-box">
+    <form name="userForm" id="userForm">
+        <div class="form-group">
+           <label class="labels noselect">First Name:</label>
+            <input type="text" id="input" name="fname" class="form-control" ng-model="data.fname"
+                   validator="required" onkeypress="return event.charCode >= 64 && event.charCode <= 122">
+        </div>
+        <div class="form-group">
+            <label class="labels noselect">Last Name:</label>
+            <input type="text" name="lname" class="form-control" ng-model="data.lname"
+                   validator="required" onkeypress="return event.charCode >= 64 && event.charCode <= 122">
+        </div>
+
+        <div class="form-group">
+            <label class="labels noselect">Email:</label>
+            <input type="text" name="email" ng-model="data.email" class="form-control" validator="required,email">
+        </div>
+
+        <div class="form-group">
+            <label class="labels noselect">Phone:</label>
+            <input type="text" name="phone" ng-model="data.phone" class="form-control"
+                   validator="required,number,minlength=10,maxlength=10">
+        </div>
+
+        <button type="submit" class="btn btn-primary pull-right" validation-submit="userForm"
+                ng-click="onNextBtnClick(data,1)">Next
+        </button>
+    </form>
+</div>

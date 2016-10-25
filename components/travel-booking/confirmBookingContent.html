@@ -1,0 +1,20 @@
+<br>
+<!--Third-tab-box-for-confirm-booking-->
+<div class="tab-box text-center noselect">
+    <b class="booking-confirmation-content"><span style="color: mediumvioletred;">{{bookingDetails[0].fname}}
+        {{bookingDetails[0].lname}}</span> ({{bookingDetails[0].phone}}) will depart for
+        <span style="color: mediumvioletred">{{locationData.city.city}}</span> on <br>
+        <span style="color: mediumvioletred">{{bookingDetails[1].departDate | date: 'dd-MMMM-yyyy' }}</span>
+        <span ng-if="bookingDetails[1].returnDate != undefined"> and return on <span style="color: mediumvioletred">
+            {{bookingDetails[1].returnDate | date: 'dd-MMMM-yyyy'}}</span></span>.</b>
+    </br></br></br>
+
+    <!--link-for-sending-email-->
+    <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+            <button type="submit" class="btn btn-primary" ui-sref="index" ng-click="sendMailBtnClick()">Confirm booking
+                via mail..
+            </button>
+        </div>
+    </div>
+</div>

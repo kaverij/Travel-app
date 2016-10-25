@@ -1,0 +1,62 @@
+<div class="noselect">
+    <div class="jumbotron jumbotron-fluid text-center img-responsive">
+        <h1 class="display-3">Take-A-Break</h1>
+        <p class="lead">journey begins here</p>
+    </div>
+
+    <!--ui-bootstrap-carousel-->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <div uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
+                    <div uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id">
+                        <img ng-src="{{slide.image}}" class="img-responsive" style="margin:auto;"
+                             draggable="false" ondragstart="return false;">
+                        <div class="carousel-caption">
+                            <p class="carousel-slide-text text noselect">{{slide.text}}</p>
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary" id="lets-go-button" ui-sref="home.personalDetails">
+                    Let's Go
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--end-ui-bootstrap-carousel-->
+<br>
+
+<!--footer-text-->
+<div class="container text-center noselect">
+    <p style="font-size: 25px;"><b>Why book our travel</b></p>
+    <br>
+    <div class="footer-text">
+        <div class="row">
+            <div class="col-md-4 text">
+                <div class="glyphicon glyphicon-thumbs-up"></div>
+                <p>Trusted by over 1.5 million happy travellers</p>
+            </div>
+            <div class="col-md-4 text">
+                <div class="glyphicon glyphicon-cutlery"></div>
+                <p>Over 20,000 Best Hotels</p>
+            </div>
+            <div class="col-md-4 text">
+                <div class="glyphicon glyphicon-star-empty"></div>
+                <p>Leading travel brand</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text text-center">
+                <div class="glyphicon glyphicon-piggy-bank"></div>
+                <p>Best Discount offer</p>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+<div class="container text-center noselect">
+    <p style="font-size: 130%"><b>Contact us:</b> <b style="color: #ffffff;">9487514856</b> <b>and Email us :
+    </b><a href="#" style="color: #ffffff;">travelwithus78@gmail.com</a></p>
+</div>
+<!--end-footer-text-->

@@ -1,0 +1,133 @@
+body {
+  overflow-x: hidden;
+  width: 100%;
+  height: auto;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-color: #0fa6bd;
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Chrome/Safari/Opera */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none;
+  cursor: default;
+}
+
+.jumbotron {
+  padding: 0.5em 0.6em;
+  background-image: url(../../assets/header_image.png);
+  color: #ffffff;
+  background-position: 0% 25%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  h1 {
+    font-family: cursive;
+  }
+  p {
+    font-size: 30px;
+    font-family: serif;
+  }
+}
+
+.carousel-control.right, .carousel-control.left {
+  background-image: linear-gradient(90deg, rgba(0, 0, 0, .0001) 0, rgba(0, 0, 0, 0));
+}
+
+.carousel-slide-text {
+  font-family: cursive;
+  color: #ffffff;
+  font-size: 130%;
+  cursor: default;
+}
+
+.tab-box {
+  margin-left: 0;
+  border-radius: 20px;
+  background-color: #a1cee8;
+  padding: 53px 40px;
+  margin-top: 0%;
+}
+
+#lets-go-button {
+  margin-left: 30%;
+  margin-top: 1%;
+  width: 45%;
+  font-size: 24px;
+  color: #fff;
+  background-color: #3077c7;
+  border-color: #193d67;
+  :hover {
+    background-color: #3077c7;
+    border-color: #193d67;
+  }
+}
+
+.nav-tabs > li {
+  a {
+    background-color: #a1cee8;
+    border: 1px solid #a1cee8;
+    margin: 2px;
+  }
+}
+
+.nav-tabs.nav-justified {
+  width: 56%;
+  border-bottom: 0;
+  margin-left: 22%;
+}
+
+.labels {
+  font-size: 18px;
+}
+
+a {
+  color: #f5f5f5;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.text {
+  transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  -webkit-transition: all 1s ease;
+  -o-transition: all 1s ease;
+}
+
+.text:hover {
+  transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  -ms-transform: scale(1.2); /* IE 9 */
+  -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=1.5, M12=0, M21=0, M22=1.5, SizingMethod='auto expand')"; /* IE8 */
+  filter: progid:DXImageTransform.Microsoft.Matrix(M11=1.5, M12=0, M21=0, M22=1.5, SizingMethod='auto expand'); /* IE6 and 7 */
+}
+
+.footer-text {
+  font-size: 22px;
+  color: #ffffff;
+}
+
+.booking-confirmation-content {
+  font-size: 26px;
+  font-family: serif;
+}
+
+.glyphicon-home {
+  top: 3px;
+  font-size: 35px;
+  color: #ef1b0f;
+}
+
+.pointer-active {
+  cursor: default;
+}
+
+.pointer-deactive {
+  pointer-events: none;
+}

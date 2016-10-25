@@ -1,0 +1,25 @@
+<div class="jumbotron text-center noselect">
+    <a class="glyphicon glyphicon-home" style="text-decoration:none;" ui-sref="index">ome</a>
+    <h1>Take-A-Break</h1>
+    <p>journey begins here</p>
+</div>
+
+<!--tabset-->
+<div class="container">
+    <div class="row">
+        <div class="col-md-11">
+            <uib-tabset active="btnIndex" justified="true">
+                <uib-tab ng-repeat="tab in tabs" index="$index" ui-sref="{{tab.action}}" heading="{{tab.title}}"
+                         disable="tab.disabled" class="{{tab.active}}">
+                    <div ui-view></div>
+                </uib-tab>
+            </uib-tabset>
+        </div>
+    </div>
+    <br><br>
+    <div class="text-center noselect">
+        <p style="font-size: 130%">Contact us: <b style="color: #ffffff;">9487514856</b> and Email us :
+            <a href="#" style="color: #ffffff;">travelwithus78@gmail.com</a></p>
+    </div>
+</div>
+<br><br><br>

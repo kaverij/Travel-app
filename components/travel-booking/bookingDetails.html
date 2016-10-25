@@ -1,0 +1,71 @@
+<br>
+<!--second-tab-box-for-booking-details-->
+<div class="tab-box">
+    <form name="bookingDetailsForm" id="bookingDetailsForm">
+        <div class="row">
+            <!--select-location-->
+            <div class="col-md-12">
+                <div class="dropdown open">
+                    <label class="labels noselect">Location: </label><br>
+                    <ui-select ng-model="locationData.city" name="city" validator="required" theme="bootstrap">
+                        <ui-select-match placeholder="Select Location">{{$select.selected.city}}</ui-select-match>
+                        <ui-select-choices repeat="city in locations |filter:$select.search">{{city.city}}
+                        </ui-select-choices>
+                    </ui-select>
+                </div>
+            </div>
+        </div>
+        <br>
+
+        <!--select-Departure-date-->
+        <div class="row">
+            <div class="col-md-12">
+                <label class="labels noselect">Departure Date:</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <p class="input-group">
+                    <input type="text" id="departDate" name="date" placeholder="Please select Departure date...."
+                           class="form-control" ng-click="open1()"
+                           uib-datepicker-popup="{{format}}" ng-model="data.departDate"
+                           is-open="popup1.opened" datepicker-options="dateOptions" ng-required="true"
+                           close-text="X"/>
+                          <span class="input-group-btn">
+                            <button type="button" class="btn btn-default" ng-click="open1()">
+                                <i class="glyphicon glyphicon-calendar"></i></button>
+                          </span>
+                </p>
+            </div>
+        </div>
+        <br>
+
+        <!--select-Return-date-->
+        <div class="row">
+            <div class="col-md-12">
+                <label class="labels noselect">Return Date:</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <p class="input-group">
+                    <input type="text" id="returnDate" placeholder="Please select Return date...." class="form-control"
+                           uib-datepicker-popup="{{format}}" ng-model="data.returnDate"
+                           is-open="popup2.opened" datepicker-options="dateOptions"
+                           close-text="X" ng-click="open2()"
+                           onkeypress="return event.charCode >= 64 && event.charCode <= 122 &&
+                       (event.charCode >= 33 && event.charCode <= 58) &&
+                       (event.charCode >= 41 && event.charCode <= 90)"/>
+                      <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="open2()"><i
+                                class="glyphicon glyphicon-calendar"></i></button>
+                      </span>
+                </p>
+            </div>
+        </div>
+        <br>
+        <button type="submit" class="btn btn-primary pull-right" validation-submit="bookingDetailsForm"
+                ng-click="onNextBtnClick(data,2)">Next
+        </button>
+    </form>
+</div>
