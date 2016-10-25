@@ -24,12 +24,8 @@ body {
   background-position: 0% 25%;
   background-size: cover;
   background-repeat: no-repeat;
-  h1 {
-    font-family: cursive;
-  }
   p {
     font-size: 30px;
-    font-family: serif;
   }
 }
 
@@ -38,7 +34,6 @@ body {
 }
 
 .carousel-slide-text {
-  font-family: cursive;
   color: #ffffff;
   font-size: 130%;
   cursor: default;
@@ -115,7 +110,6 @@ a {
 
 .booking-confirmation-content {
   font-size: 26px;
-  font-family: serif;
 }
 
 .glyphicon-home {
