@@ -43,7 +43,7 @@ function mainController($scope, $http, $state, $filter) {
     function sendMail() {                                          //method for send booking confirmation mail.
         $http({
             method: 'GET',
-            url: 'http://192.168.10.72:7000/postEmail?email=' + $scope.bookingDetails[0].email +
+            url: 'http://192.168.10.72:1000/postEmail?email=' + $scope.bookingDetails[0].email +
             '&fname=' + $scope.bookingDetails[0].fname +
             '&lname=' + $scope.bookingDetails[0].lname +
             '&phone=' + $scope.bookingDetails[0].phone +
@@ -63,10 +63,6 @@ function mainController($scope, $http, $state, $filter) {
             $state.go('home.bookingDetails');
         } else if (index == 2) {
             $state.go('home.message');
-            $scope.tabs[0].disabled = true;
-            $scope.tabs[1].disabled = true;
-            $scope.tabs[0].active = 'pointer-deactive';
-            $scope.tabs[1].active = 'pointer-deactive';
         }
     };
 
