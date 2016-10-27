@@ -32,13 +32,23 @@ function mainController($scope, $http, $state, $filter) {
     };
 
     $scope.tabs = [
-        {title: 'Personal Details', disabled: false, active: 'pointer-active', action: '.personalDetails'},
+        {title: 'Personal Details', disabled: true, active: 'pointer-deactive', action: '.personalDetails'},
         {title: 'Booking Details', disabled: true, active: 'pointer-deactive', action: '.bookingDetails'},
         {title: 'Confirm Booking', disabled: true, active: 'pointer-deactive', action: '.message'}];
 
     $scope.locationData = {};
     $scope.bookingDetails = [];
     $scope.btnIndex = 0;
+
+    $scope.onNextBtnClick = function (object, index) {                     //button click for go to next tab.
+        $scope.bookingDetails.push(object);
+        $scope.btnIndex++;
+        if (index == 1) {
+            $state.go('home.bookingDetails');
+        } else if (index == 2) {
+            $state.go('home.message');
+        }
+    };
 
     function sendMail() {                                          //method for send booking confirmation mail.
         $http({
@@ -52,19 +62,6 @@ function mainController($scope, $http, $state, $filter) {
             '&returnDate=' + $filter('date')($scope.bookingDetails[1].returnDate, "dd-MMMM-yyyy")
         })
     }
-
-    $scope.onNextBtnClick = function (object, index) {                     //button click for go to next tab.
-        $scope.bookingDetails.push(object);
-        $scope.btnIndex++;
-        $scope.tabs[index].disabled = false;
-        $scope.tabs[index].active = 'pointer-active';
-
-        if (index == 1) {
-            $state.go('home.bookingDetails');
-        } else if (index == 2) {
-            $state.go('home.message');
-        }
-    };
 
     $scope.sendMailBtnClick = function () {                                     //button click for send mail.
         sendMail();
