@@ -27,7 +27,7 @@ export default function ($stateProvider, $urlRouterProvider) {
             templateUrl: '../components/travel-booking/bookingDetails.html'
         })
         .state('home.message', {
-            url: '/message',
+            url: '/confirmBooking',
             templateUrl: '../components/travel-booking/confirmBookingContent.html'
         });
 }
