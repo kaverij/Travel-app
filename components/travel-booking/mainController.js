@@ -48,7 +48,7 @@ function mainController($scope, $http, $state, $filter) {
         } else if (index == 2) {
             $state.go('home.message');
         }
-        console.log("city",$scope.locationData);
+        console.log("city", $scope.locationData);
     };
 
     function sendMail() {                                          //method for send booking confirmation mail.

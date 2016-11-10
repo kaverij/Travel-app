@@ -2,7 +2,6 @@ var stateController = require('../components/travel-booking/mainController.js');
 var firstTemplate = require('../components/travel-booking/index.html');
 var secondTemplate = require('../components/travel-booking/home.html');
 
-
 export default function ($stateProvider, $urlRouterProvider) {
     'ngInject';
     $urlRouterProvider.otherwise('/index');
@@ -31,4 +30,3 @@ export default function ($stateProvider, $urlRouterProvider) {
             templateUrl: '../components/travel-booking/confirmBookingContent.html'
         });
 }
-
